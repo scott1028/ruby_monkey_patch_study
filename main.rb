@@ -1,3 +1,5 @@
+# ref: https://github.com/rails/rails/blob/master/railties/lib/rails/application.rb - Application -> config
+
 module App
 	class Main
 		# class variable, 類似 singleton 的 variable
