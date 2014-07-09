@@ -1,3 +1,5 @@
+# encoding: utf-8
+
 # ref: https://github.com/rails/rails/blob/master/railties/lib/rails/application.rb - Application -> config
 
 # Module::Class 的結構
@@ -81,3 +83,12 @@
     block3(fn2)
 
     puts 'start...4(也可以達到類似 Decorator 的效果)'
+
+    def block4
+        yield
+    end
+
+    block4 { puts 78910 }
+
+    puts 'start...5(另類的寫法)'
+
