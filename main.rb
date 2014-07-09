@@ -18,11 +18,26 @@ module App
 		def echo
 			puts @@x+50
 		end
+
+		def get_jj
+			puts @jj
+		end
+
+		def initialize
+
+			# Rails 內採用的方法
+			instance_variable_set("@jj", 789)
+			
+			# equal: @jj=789
+		end
 	end
 end
 
 require './patch.rb'
 
-App::Main.new.echo
+app = App::Main.new
+
+app.echo
+app.get_jj
 
 puts 'start...'
