@@ -2,6 +2,9 @@
 
 module App
 	class Main
+		# 標記 @jj 為可存取(@jj: Instance variable)
+		attr_accessor :jj
+
 		# class variable, 類似 singleton 的 variable
 		@@x=nil
 
@@ -39,5 +42,10 @@ app = App::Main.new
 
 app.echo
 app.get_jj
+
+# 透過 accessor 來取得 @jj
+puts app.jj
+app.jj += 20
+puts app.jj
 
 puts 'start...'
